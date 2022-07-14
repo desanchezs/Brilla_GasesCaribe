@@ -133,7 +133,7 @@ def main_brilla(files: list, numericas: list, categoricas: list, clasificador: s
         predicciones_df_gases = clasificador.predict(X_gases)
     else: predicciones_df_gases = []
         
-    if matriz_confusion: return predicciones, clasificador, brilla_clasificador.matrix
+    if matriz_confusion: return predicciones, predicciones_df_gases, brilla_clasificador.matrix
     else: return predicciones, predicciones_df_gases
 
 
